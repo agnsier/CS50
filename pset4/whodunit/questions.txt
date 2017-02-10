@@ -1,0 +1,39 @@
+1.  stdint.h is a header file in the C standard library. allow programmers to write more portable code by providing a set of typedefs 
+
+This is a header file that provides access to several functions related to integer standards, such as uint8_t, uint32_t, int32_t,
+and uint16_t . These functions specify the exact width of integers. 
+These functions allow code to be more portable by setting widths dependent on the processor targets (whether 32 bit or 64 bit, for example).
+
+2.These functions are a cross-platform implementation of a standard data type. uint8_t is an unsigned int of 8 bits, uint32_t 
+is an unsigned long long, int32_t is a signed long long, and a uint16_t is an unsigned 16 bit int.
+
+3.  
+Byte: 1
+DWORD: 4
+LONG: 4
+WORD: 2
+4.What (in ASCII, decimal, or hexadecimal) must the first two bytes of any BMP file be? Leading bytes used to identify file formats 
+(with high probability) are generally called "magic numbers."  
+The first two bytes specify the file is a bitmap with the words "BM", or the hex 0x4D42 .
+
+5.  What’s the difference between bfSize and biSize?
+bfSize describes the entire file size in bytes, whereas biSize is the size of BITMAPINFOHEADER in bytes.
+
+6.  What does it mean if biHeight is negative?
+Negative biHeight means the bitmap is is a top-down DIB with the origin at the upper left corner.
+
+7. What field in BITMAPINFOHEADER specifies the BMP’s color depth (i.e., bits per pixel)?
+biBitCount .
+
+8.  Why might fopen return NULL in copy.c:37?
+fopen will return null if it cannot open the file. This can happen if there is not enough memory or the file cannot be found.
+
+9. Why is the third argument to fread always 1 in our code?
+The third argument determines the number of elements fread will read. So this argument is always 1 because we are always reading one
+file.
+10. What value does line 65 of copy.c assign to padding if bi.biWidth is 3? 1
+11. What does fseek do?
+the code above skips the padding in the inptr file, and adds this to the current pointer position as determined by SEEK_CUR, thereby 
+advancing the program's place in the file.
+
+12. SEEK_CUR is an option used in fseek to set the offset relative to the current pointer position.
